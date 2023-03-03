@@ -38,7 +38,6 @@ int main() {
     printf("Enter the map data.txt file name: ");
     scanf("%[^\n]%*c", map_data_file_name);
     printf("Now that your done with that longgg process. Let me generate the packed map file for you.\nPacking...\n");
-    sleep(1);
     flux_packer* packer = flux_packer_init(artist_name, song_name, mapper_name, map_data_file_name, audio_file_name);
     flux_packer_pack(packer);
     flux_packer_cleanup(packer);

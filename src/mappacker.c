@@ -18,7 +18,7 @@ void flux_packer_pack(flux_packer* packer) {
     FILE* out = fopen(output, "a+");
     FILE* mp3 = fopen(packer->mp3_file, "rb");
     FILE* map = fopen(packer->map_file, "r+");
-    
+
     if(out == NULL) {
         fprintf(stderr, "Failed to open output file(%s) for writing\nQuitting...\n", output);
         exit(-1);
@@ -27,7 +27,7 @@ void flux_packer_pack(flux_packer* packer) {
         fprintf(stderr, "Failed to open mp3 file(%s) for reading\nQuitting...\n", packer->mp3_file);
         exit(-1);
     }
-    if(map = NULL) {
+    if(map == NULL) {
         fprintf(stderr, "Failed to open map file(%s) for writing\nQuitting...\n", packer->map_file);
         exit(-1);
     }
